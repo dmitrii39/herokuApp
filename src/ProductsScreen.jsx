@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Modal} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Modal, Linking} from 'react-native';
 import axios from 'axios';
 
 
@@ -29,6 +29,11 @@ const ProductsScreen = ({ navigation, route }) => {
       const handlegoHome = () => {
         navigation.navigate('ToBegin');
       };
+
+      const goToLinkHandle = ()=> {
+        const url = 'https://go-apod.herokuapp.com/#api-docs';
+Linking.openURL(url).catch(err => console.error('An error occurred', err));
+      }
   
     return (
       <View style={styles.container}>
@@ -68,6 +73,16 @@ const ProductsScreen = ({ navigation, route }) => {
       </TouchableOpacity>
     </TouchableOpacity>
   </Modal>
+  <View style={styles.footer}>
+            <TouchableOpacity
+            onPress={goToLinkHandle}
+            style={styles.LinkButton}>
+                <Text style={styles.linkText}>
+                {`Перейти по ссылке`}
+                </Text>
+                </TouchableOpacity>
+         
+        </View>
 </View>
 );
 };
@@ -132,6 +147,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#33FF96',
         marginBottom: 10,
     },
+    footer: {
+        width: '100%',
+        height: 100,
+        justifyContent: 'center',
+        backgroundColor: '#33FF96',
+        marginTop: 10,
+    },
     userName: {
         alignSelf: 'center',
         fontSize: 26
@@ -143,6 +165,12 @@ const styles = StyleSheet.create({
     },
     goHomeText: {
         fontSize: 20
+    },
+    LinkButton: {
+        alignSelf: 'center'
+    },
+    linkText: {
+   fontSize: 18,
     }
     });
     
