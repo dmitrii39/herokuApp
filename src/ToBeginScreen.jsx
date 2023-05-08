@@ -4,7 +4,7 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 function ToBeginScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate('Products')} style={styles.toBeginButton}>
+      <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.toBeginButton}>
         <Text style={styles.txt}>Начать</Text>
       </TouchableOpacity>
     </View>

@@ -24,11 +24,11 @@ const ProductsScreen = () => {
           <View key={product.id} style={styles.card}>
             <Text style={styles.title}>{product.title}</Text>
             <Image
-        style={{ width: 200, height: 200 }}
+        style={{ width: 200, height: 200, alignSelf: 'center'}}
         source={{ uri: product.image }}
       />
            <Text style={styles.desciption}>{product.description}</Text>
-      <Text style={styles.product}>${product.price}</Text>
+      <Text style={styles.price}>${product.price}</Text>
             
           </View>
        
@@ -55,14 +55,16 @@ const ProductsScreen = () => {
       borderRadius: 10,
       padding: 10,
     },
-    title: { 
+    title: {
+        alignSelf: 'center', 
         fontSize: 16, 
         fontWeight: 'bold', 
         marginBottom: 8 },
         desciption: {
             
         },
-        product: { 
+        price: { 
+            alignSelf: 'center', 
             fontSize: 16, 
             fontWeight: 'bold', 
             color: '#008080' 
