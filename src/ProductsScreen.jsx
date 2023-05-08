@@ -27,8 +27,8 @@ const ProductsScreen = () => {
         style={{ width: 200, height: 200 }}
         source={{ uri: product.image }}
       />
-           <Text style={{ fontSize: 14, marginBottom: 8 }}>{product.description}</Text>
-      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#008080' }}>${product.price}</Text>
+           <Text style={styles.desciption}>{product.description}</Text>
+      <Text style={styles.product}>${product.price}</Text>
             
           </View>
        
@@ -46,36 +46,11 @@ const ProductsScreen = () => {
       alignItems: 'center',
       justifyContent: 'center',
     },
-    form: {
-      backgroundColor: '#33FF96',
-      borderRadius: 10,
-      
-    },
-    input: {
-      borderWidth: 1,
-      borderColor: '#ddd',
-      borderRadius: 5,
-      padding: 10,
-      marginVertical: 10,
-    },
-    button: {
-      backgroundColor: '#33DAFF',
-      borderRadius: 5,
-      padding: 10,
-      alignItems: 'center',
-      marginTop: 20,
-    },
-    buttonText: {
-      color: '#fff',
-      fontWeight: 'bold',
-    },
-    error: {
-      color: 'red',
-    },
+ 
     card: {
       width: 350,
       marginBottom: 30,
-
+    justifyContent: 'center',
       backgroundColor: '#33FF96',
       borderRadius: 10,
       padding: 10,
@@ -86,7 +61,13 @@ const ProductsScreen = () => {
         marginBottom: 8 },
         desciption: {
             
+        },
+        product: { 
+            fontSize: 16, 
+            fontWeight: 'bold', 
+            color: '#008080' 
         }
+
 })
 
   export default ProductsScreen;

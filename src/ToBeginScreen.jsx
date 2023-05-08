@@ -16,14 +16,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#33DAFF', // Цвет фона
+    backgroundColor: '#33DAFF', 
   },
   toBeginButton: {
-    backgroundColor: '#33FF96', // Цвет кнопки
+    backgroundColor: '#33FF96', 
     paddingVertical: 10,
     paddingHorizontal: 30,
     borderRadius: 25,
-    shadowColor: '#000', // Добавление тени
+    shadowColor: '#000', 
     shadowOffset: {
       width: 0,
       height: 2,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Cochin',
     fontWeight: 'bold',
     fontSize: 30,
-    color: '#FFF', // Цвет текста
+    color: '#FFF', 
   },
 });
 
