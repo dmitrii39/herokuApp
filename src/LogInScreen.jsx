@@ -19,7 +19,7 @@ const LoginScreen = ({navigation}) => {
   };
 
   const handleLogin = () => {
-    navigation.navigate('Products')
+    navigation.navigate('Products', { email });
   };
 
   return (
