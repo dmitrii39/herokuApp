@@ -1,10 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-function ToBeginScreen() {
+function ToBeginScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.toBeginButton}>
+      <TouchableOpacity onPress={() => navigation.navigate('Products')} style={styles.toBeginButton}>
         <Text style={styles.txt}>Начать</Text>
       </TouchableOpacity>
     </View>
