@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import NetInfo from "@react-native-community/netinfo";
+
 
 const OfflineScreen = () => {
-  const [isConnected, setIsConnected] = useState(true);
 
-  useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener(state => {
-      setIsConnected(state.isConnected);
-    });
-
-    return () => {
-      unsubscribe();
-    };
-  }, []);
 
   return (
     <View style={styles.container}>
